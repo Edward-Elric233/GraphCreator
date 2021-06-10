@@ -19,7 +19,8 @@ ClientWidget::ClientWidget(QWidget *parent)
     });
     connect(tcpSocket, &QTcpSocket::readyRead, [=](){
         QByteArray buf = tcpSocket->readAll();
-        ui->textEdit->append(buf);
+        QString origin_buf = ui->textEdit->toPlainText();
+        ui->textEdit->setText(origin_buf + QString(buf));
     });
 }
 
@@ -42,7 +43,7 @@ void ClientWidget::on_pushButtonGenerate_clicked()
     ui->textEdit->clear();
     QString node_num = ui->spinBoxNode->text();
     QString edge_num = ui->spinBoxEdge->text();
-    ui->lineEdit->setText(node_num + "_" + edge_num + ".json");
+    ui->lineEdit->setText("Case" + node_num + ".json");
 
     QString buf = node_num + " " + edge_num;
     tcpSocket->write(buf.toUtf8().data());
@@ -50,7 +51,7 @@ void ClientWidget::on_pushButtonGenerate_clicked()
 
 void ClientWidget::on_pushButtonSave_clicked()
 {
-    qDebug() << "ready to write";
+//    qDebug() << "ready to write";
     QString file_name = ui->lineEdit->text();
     std::ofstream os(file_name.toUtf8());
     os << ui->textEdit->toPlainText().toUtf8().data();
