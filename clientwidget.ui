@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ClientWidget</class>
+ <widget class="QWidget" name="ClientWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>557</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ClientWidget</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="0" column="0">
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="6" column="0" colspan="6">
+      <widget class="QTextEdit" name="textEdit">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0" colspan="5">
+      <widget class="QPushButton" name="pushButtonConnect">
+       <property name="text">
+        <string>连接</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="labelNode">
+       <property name="text">
+        <string>节点数：</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QSpinBox" name="spinBoxNode"/>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="lineEditIp"/>
+     </item>
+     <item row="0" column="4">
+      <widget class="QLineEdit" name="lineEditPort"/>
+     </item>
+     <item row="3" column="3">
+      <widget class="QLabel" name="labelEdge">
+       <property name="text">
+        <string>边数：</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="labelIp">
+       <property name="text">
+        <string>IP地址：</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QLabel" name="labelPort">
+       <property name="text">
+        <string>端口：</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="4">
+      <widget class="QSpinBox" name="spinBoxEdge"/>
+     </item>
+     <item row="7" column="1">
+      <widget class="QLineEdit" name="lineEdit"/>
+     </item>
+     <item row="7" column="0">
+      <widget class="QLabel" name="labelFile">
+       <property name="text">
+        <string>文件名：</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0" colspan="5">
+      <widget class="QPushButton" name="pushButtonGenerate">
+       <property name="text">
+        <string>生成</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="3" colspan="2">
+      <widget class="QPushButton" name="pushButtonSave">
+       <property name="text">
+        <string>保存</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
